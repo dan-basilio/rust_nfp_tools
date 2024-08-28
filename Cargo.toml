@@ -1,0 +1,44 @@
+[package]
+name = "rust_nfp_tools"
+version = "0.1.0"
+edition = "2021"
+default-run = "rust-nfp-cpp"
+
+[dependencies]
+regex = "1.10.6"
+memmap2 = "0.9.4"
+fs2 = "0.4.3"
+clap = { version = "4.5.17", features = ["derive"] }
+clap-num = "1.1.1"
+bytemuck = { version = "1.18.0", features = ["extern_crate_alloc"] }
+bitfield = "0.17.0"
+ctrlc = "3.4.5"
+object = "0.36.4"
+
+[[bin]]
+name = "rust-nfp-cpp"
+path = "src/bin/nfp_cpp.rs"
+
+[[bin]]
+name = "rust-nfp-xpb"
+path = "src/bin/nfp_xpb.rs"
+
+[[bin]]
+name = "rust-nfp-mem"
+path = "src/bin/nfp_mem.rs"
+
+[[bin]]
+name = "rust-nfp-rfpc-reg"
+path = "src/bin/nfp_rfpc_reg.rs"
+
+[[bin]]
+name = "rust-nfp-rfpc-trace"
+path = "src/bin/nfp_rfpc_trace.rs"
+
+[[bin]]
+name = "rust-nfp-virt-term"
+path = "src/bin/nfp_virt_term.rs"
+
+[[bin]]
+name = "rust-nfp-gdb"
+path = "src/bin/nfp_gdb.rs"
